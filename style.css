@@ -1,0 +1,46 @@
+td > button {
+    width: 100%;
+    border:none;
+    background:#656588;
+    color:white;
+    cursor:pointer;
+    border-radius: 3px;
+  }
+  .previous{
+    align-self: flex-start;
+    margin-left: 30px;
+  
+  }
+  #title {
+    color: green; 
+    text-align: center;
+    margin: unset;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  table {
+    border-spacing: 5px;
+  }
+  .oper {
+    background: #662c7b;
+  }
+  .clr{
+    background: #d62d2d;
+  }
+  
+  #table{
+    border: 5px solid red;
+    border-radius: 20px;
+    width: 250px;
+    margin: auto;
+    padding:10px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .submit {
+    width: 100%;
+    background: #3f883f;
+  }

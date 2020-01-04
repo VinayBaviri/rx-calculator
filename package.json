@@ -1,0 +1,23 @@
+{
+  "name": "rx-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinayBaviri/rx-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VinayBaviri/rx-calculator/issues"
+  },
+  "homepage": "https://github.com/VinayBaviri/rx-calculator#readme",
+  "dependencies": {
+    "rxjs": "^6.5.4",
+    "typescript": "^3.7.4"
+  }
+}
