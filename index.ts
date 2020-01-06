@@ -1,8 +1,8 @@
 import { of, pipe, fromEvent,  Subject} from 'rxjs'; 
 import { map, concatAll } from 'rxjs/operators';
-import './style.css';
-let disValue = '', opearator='', previousValue = '';
-let firstOperand: number, secondOperand: number;
+import './style.scss';
+let disValue = '', opearator='+', previousValue = '';
+let firstOperand: number= 0, secondOperand: number=0;
 
 const disSub = new Subject()
 disSub.subscribe({
@@ -40,7 +40,8 @@ const operMap = operClickObser.pipe(
   })
 );
 operMap.subscribe(event => {
-  disValue ='';
+  disValue = '';
+  previousValue += opearator;
   preSub.next()
   disSub.next()
 })
@@ -74,13 +75,17 @@ function doit(fir: number, sec: number, oper: string) {
   }
   disValue = result+'';  
   previousValue ='';
+  firstOperand=0;
+  secondOperand=0;
   preSub.next()
   disSub.next()
 }
 const clearObser = fromEvent(document.querySelector(".clear"), 'click')
 clearObser.subscribe(x => {
-  disValue = ''
-  previousValue = ''
+  disValue = '';
+  previousValue = '';
+   firstOperand=0;
+  secondOperand=0;
   preSub.next()
   disSub.next()
 })
